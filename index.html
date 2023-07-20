@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WISATA KARO</title>
+    <title>Takasima Travel</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
     </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
     </style>
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,19 +22,41 @@
     <header>
         <nav>
             <div class="logo">
-                <h3>Takasima</h3>
+                <h1>Takasima</h1>
             </div>
-
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Price</a></li>
-                <li><a href="#">About</a></li>
-                <button>
-                    <a href="Login">Get Started</a>
-                </button>
+            
+            <ul>        
+                <!-- <div class="bx bx-menu" id="hamburger-ic" style="font-size: 24px; padding-left: 4px; padding-top: 4px;"></div> -->
+                <li><a href="#welcome">Home</a></li>
+                <li>
+                    <a href="#service">Service ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">▪ Paket Wisata</a></li>
+                        <li><a href="#">▪ Booking Hotel</a></li>
+                        <li><a href="#">▪ Tiket Pesawat</a></li>
+                        <li><a href="#">▪ Open Trip</a></li>
+                        <li><a href="#">▪ Peralatan Travel</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#destination">Destination ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">▪ Sumatra</a></li>
+                        <li><a href="#">▪ Jawa</a></li>
+                        <li><a href="#">▪ Kalimantan</a></li>
+                        <li><a href="#">▪ Sulawesi</a></li>
+                        <li><a href="#">▪ Papua</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#price">Price</a></li> -->
+                <li><a href="#about">About</a></li>
+                
             </ul>
-    
+            <div>
+                <button class="button-68">
+                    <a href="#contact">Get Started</a>
+                </button>
+            </div>
             <div class="menu-toggle">
                 <input type="checkbox">
                 <span></span>
@@ -46,26 +70,189 @@
     <main>
         <!-- MAIN CONTENT -->
         <div id="content">
-            <article>
+            <article id="welcome" class="welcome">
+                
+                <h5>Let's</h5>
+                <h1>Planning your <br> own journey</h1>
+                <p>Experience the mesmerizing blend of pristine landscapes, vibrant cultures,<br> 
+                    and unparalleled biodiversity in Indonesia that beckons travelers <br>
+                    to embark on an unforgettable journey of natural wonders.</p>
+                <a href="#" class="btn">Book a trip</a>
+            </article>
+
+            <article id="service" class="service" style="text-align: center;">
+                <h2>SERVICE</h2>
+                <div class="featured-service">
+
+                    <div class="row">
+                        <div class="row-img">
+                            <img src="assets/holiday.png" alt="">
+                        </div>
+                        <h3>Paket Liburan</h3>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="row-img">
+                            <img src="assets/hotel.png" alt="">
+                        </div>
+                        <h3>Booking Hotel</h3>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="row-img">
+                            <img src="assets/flight.png" alt="">
+                        </div>
+                        <h3>Tiket Pesawat</h3>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="row-img">
+                            <img src="assets/opentrip.png" alt="">
+                        </div>
+                        <h3>Open Trip</h3>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="row-img">
+                            <img src="assets/travel-add.png" alt="">
+                        </div>
+                        <h3>Peralatan Travel</h3>
+                    </div>
+                </div>
+            </article>
+
+            <article id="destination" class="destination" style="text-align: center;">
+                <h2>DESTINATION</h2>
+                <div class="featured-destination">
+                    <div class="destination-img">
+                        <img src="assets/toba_lake.jpg" alt="">
+                    </div>
+                    <div class="destination-text">
+                        <h3>Danau Toba</h3>
+                        <p>Toba Lake in North Sumatra, Indonesia, is a magnificent and culturally significant crater lake, 
+                            known as the largest in Southeast Asia. Surrounded by lush landscapes and traditional Batak villages, 
+                            the lake offers a serene escape with its shimmering blue waters, perfect for boating and relaxation. 
+                            It holds historical and cultural significance for the local Batak people, making it a must-visit destination 
+                            for those seeking natural beauty and cultural exploration.</p>
+                            <a href="#" class="btn">Read more</a>
+                    </div>
+                </div>
+
+                <div class="featured-destination">
+                    <div class="destination-img">
+                        <img src="assets/bali.jpg" alt="">
+                    </div>
+                    <div class="destination-text">
+                        <h3>Bali</h3>
+                        <p>Bali, the enchanting Indonesian island, is a paradise that captivates visitors with its pristine beaches, 
+                            lush landscapes, and vibrant culture. Known as the "Island of the Gods," Bali offers a perfect blend of stunning 
+                            natural beauty, ancient temples, and traditional arts. From the iconic rice terraces of Ubud to the vibrant \
+                            nightlife in Seminyak, Bali caters to all types of travelers. Immerse yourself in the island's spiritual atmosphere, 
+                            indulge in delectable cuisine, or simply unwind on the idyllic beaches. With its warm hospitality and captivating charm, 
+                            Bali continues to be a top destination for those seeking a truly magical and unforgettable experience.</p>
+                            <a href="#" class="btn">Read more</a>
+                    </div>
+                </div>
+
+                <div class="featured-destination">
+                    <div class="destination-img">
+                        <img src="assets/raja_ampat.jpg" alt="">
+                    </div>
+                    <div class="destination-text">
+                        <h3>Raja Ampat</h3>
+                        <p>
+                            Raja Ampat, a tropical paradise in Indonesia, is an untouched gem that astounds travelers with its unparalleled beauty. 
+                            Located in West Papua, Raja Ampat is an archipelago comprising over 1,500 small islands, boasting crystal-clear turquoise 
+                            waters, vibrant coral reefs, and a rich marine biodiversity. It is a dream destination for snorkelers and divers, offering 
+                            breathtaking underwater landscapes teeming with colorful fish and rare marine species. With its pristine beaches, lush rainforests, 
+                            and awe-inspiring limestone karsts, Raja Ampat presents a true haven for nature lovers and adventure seekers, leaving visitors in 
+                            awe of its untouched and surreal beauty.</p>
+                            <a href="#" class="btn">Read more</a>
+                    </div>
+                </div>
+                <a href="#" class="btn" style="margin-top: 50px;">Find more</a>
 
             </article>
 
-            <!-- <article>
-
+            <!-- <article id="price" class="section1"style="text-align: center;">
+                <h2>HARGA</h2>
             </article> -->
+            
+            <!-- <article id="about" class="about"style="text-align: center;">
+                <h2>ABOUT</h2>
+            </article> -->
+
+            
+            <article id="contact" class="contact"style="text-align: center;">
+                <h2>NEWSLETTER</h2>
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h1>Ready to Explore?</h1>
+                        <p>Let's go on vacation, make your day</p>
+                    </div>
+
+                    <form action="">
+                        <input type="email" placeholder="Enter your email...">
+                        <input type="submit" value="Get Started" class="button-68">
+                    </form>
+
+                </div>
+            </article>
         </div>
     
 
         <!-- PROFILE SIDE MENU -->
-        <aside>
+        <aside id="about" class="about"style="text-align: center;">
+            <h2>ABOUT ME</h2>
+            <div class="about-content">
 
+                <div class="profile">
+                    <img src="assets/profile.png" alt="Profile Picture">
+                </div>
+                <div class="profile-info">
+                    <h2>Bonifasius Tarigan</h2>
+                    <p>Web Developer</p>
+                    <p>I majored in Informatics Telkom University. I am currently exploring the field of Android Mobile Apps and Web Development. <br> I am also open to opportunities both freelance projects and work in companies
+
+                        I have a broad interest in many things, such as software development, photography, stocks, and sports. Therefore, I enjoy learning new things, especially technology.</p>
+                    <ul>
+                        <li><strong>Email:</strong> bonifasius.tambak@gmail.com</li>
+                        <li><strong>Website:</strong> www.tarigan.net</li>
+                        <li><strong>Location:</strong> Bandung, Jawa Barat</li>
+                    </ul>
+                </div>
+            </div>
         </aside>
     </main>
     
 
     <!-- FOOTER -->
     <footer>
-        <p>Belajar Dasar Pemrograman Web &#169; 2019, Dicoding Academy</p>
+        <div class="footer-container">
+            <!-- <div class="footer-column">
+                <h3>Hubungi Kami</h3>
+                <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Jalan Pariwisata No. 123, Kota Wisata, Negara</li>
+                <li><i class="fas fa-phone"></i> +12 3456 7890</li>
+                <li><i class="fas fa-envelope"></i> info@travelagent.com</li>
+                </ul>
+            </div> -->
+            
+            <div class="footer-column">
+                <h3>Ikuti Kami</h3>
+                <ul class="social-media-icons">
+                    <li><a href="#"><i class="ri-facebook-circle-fill" style="font-size: 20px; color: white;"></i></a></li>
+                    <li><a href="#"><i class="ri-twitter-fill" style="font-size: 20px; color: white;"></i></a></li>
+                    <li><a href="#"><i class="ri-instagram-fill" style="font-size: 20px; color: white;"></i></a></li>
+                    <li><a href="#"><i class="ri-pinterest-fill" style="font-size: 20px; color: white;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+        <p>Copyright&copy; 2023 Takasima Travel Agent. <br> 
+            Made with <i class="ri-heart-fill" style="color: #FF0101; font-size: 18px;"></i> by Takasima.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

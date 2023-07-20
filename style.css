@@ -1,51 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Quicksand:wght@500&display=swap');
+
+/* BASE STYLE */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    list-style: none;    
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
 }
 
-/* Navbar Styles */
+a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+h1, h2, p {
+    margin: 1.6rem 0;
+}
+h1 {
+    font-weight: 800;
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 2.8rem;
+    margin-bottom: 48px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+
+p {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* HEADER SECTION */
+
+.logo h1 {
+    font-size: 3.2rem;
+    color: black;
+    margin: 0;
+}
+
+header {
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding: 27px 10%;
+
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+
 nav {
     display: flex;
-    background-color: yellowgreen;
-
-    justify-content: space-around;
-    color: black;
-
-    /* padding: 20px 0; */
-    height: 50px;
-    align-items: center;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    width: 20%;
     justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(67, 62, 62); */
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 2.5rem;
+    position: relative; /* Tambahkan properti ini */
+
 }
 
-
-nav .logo {
-    font-family: 'Monserrat', sans-serif;
-}
-
-nav ul li a {
+nav ul li a{
     color: black;
-    text-decoration: none;
-    font-size: 0.9rem;
-} 
-
-nav ul li:hover {
-    background-color: black;
-} 
+}
 nav ul li a:hover {
+    font-size: 1.8rem;
     color: white;
-} 
+    transition: 0.25s ease-in-out;
+}
 
+ul li ul.dropdown {
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(35px);
+    position: absolute;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+
+}
+
+
+
+ul li:hover ul.dropdown{
+    display: flex;
+    flex-direction: column; /* Tambahkan properti ini */
+    width: 200px;
+
+    padding: 2px 2%;
+}
+
+.button-68 {
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 8px;
+    line-height: 1;
+    border-radius: 50px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .1s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 8px 12px;
+    color: #616467;
+    box-shadow: inset 0 0 0 1px #000000;
+    background-color: transparent;
+    height: 36px;
+}
+.button-68 a {
+    color: black;
+}
+.button-68:hover, .button-68:hover a {
+    color: white;
+    background-color: black;
+    
+}
+.button-68:hover {
+    box-shadow: inset 0 0 0 2px #eadf0c;
+
+}
+/* MAIN */
+main {
+    /* background: #fff; */
+    height: auto;
+    overflow: auto;
+}
+article {
+    padding: 70px 17% 60px;
+    
+}
+/* welcome section */
+#welcome {
+
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url(assets/bg.jpg) center/cover no-repeat fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+;
+    
+}
+
+#welcome h5 {
+    margin-top: 15%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px ;
+}
+
+#welcome h1 {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 60px;
+    margin-bottom: 10px;
+    letter-spacing: 4px ;
+}
+#welcome p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+#welcome .btn {
+    display: inline-block;
+    padding: 13px 20px;
+    width: 125px;
+    background-color: rgb(236, 198, 86);
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    width: auto;
+    
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+#welcome .btn:hover {
+    background-color: transparent;
+    color: rgb(236, 198, 86);
+    border: 2px solid rgb(236, 198, 86);
+}
+.btn:hover {
+    background-color: rgb(46, 41, 63);
+    color: rgb(236, 198, 86);
+    border: 2px solid black;
+    
+}
+
+
+main .service {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    /* background: rgb(148, 139, 171); */
+    background: linear-gradient(rgb(161, 97, 112, 0.9),rgb(161, 97, 112, 0.7));
+    height: auto;
+}
+
+main .destination {
+    /* padding: 100px 0; */
+    background: linear-gradient(rgb(161, 97, 112,0.7),rgb(255, 169, 87, 1));
+    /* background: orange; */
+    height: auto;
+}
+
+main .contact {
+    /* padding: 100px 0; */
+    background: linear-gradient(rgb(255, 169, 87, 1), rgb(241, 191, 76, 0.6));
+    height: auto;
+}
+main .about {
+    background: linear-gradient( rgb(241, 191, 76, 0.6), rgb(93, 154, 154));
+    height: auto;
+}
+
+nav.sticky{
+    background: transparent;
+    backdrop-filter: blur(35px);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding: 6px 10%;
+}
+
+/* service */
+.featured-service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+.row h3:hover{
+    color: rgb(236, 198, 86);
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.row-img{
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.row-img img{
+    /* width: 100%; */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    object-position: center;
+
+}
+
+.row-img img:hover{
+    transform: scale(1.2);
+}
+
+
+/* destination */
+.featured-destination {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 9rem;
+    margin-top: 80px;
+}
+.destination-text h3 {
+    padding-top: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.destination-text p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 30px;
+    margin-bottom: 35px;
+    text-align: start;
+}
+
+.destination-img img {
+    border-radius: 20px;
+    height: 500px;
+    object-fit: cover;
+}
+/* newsletter */
+.newsletter-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.newsletter-content form {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    gap: 1rem;
+}
+.newsletter-content form input:first-child{
+    padding: 15px;
+    background: rgb(171, 186, 151);
+    font-size: 16px;
+    color: black;
+    border-radius: 10px;
+}
+
+/* profile aside */
+.about {
+    display: block;
+    padding-left: 20%;   
+    padding-right: 20%;   
+}
+
+aside {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+}
+
+.profile img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.profile-info {
+    width: 100;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-info p {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.profile-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.profile-info li {
+    font-size: 16px;
+}
+
+.profile-info li strong {
+    margin-right: 5px;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #1c1520;
+    text-align: center;
+    font-weight: bold;
+}
+
+.social-media-icons {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+.social-media-icons li {
+
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+
+/* css media */
 /* hamburger meun */
 .menu-toggle {
     display: flex;
@@ -94,67 +498,133 @@ nav ul li a:hover {
     opacity: 0;
     scale: 0;
 }
-/* RESPONSIVE */
-@media screen and (min-width: 1300px) {
+
+
+@media (min-width: 960px) {
     .menu-toggle {
         display: none;
     }
 }
-@media screen and (max-width: 1300px) {
-    .menu-toggle {
-        display: none;
-    }
-    nav ul {
-        width: 25%;
-    }
-}
-@media screen and (max-width: 1080px) {
-    .menu-toggle {
-        display: none;
-    }
-    nav ul {
-        width: 30%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-    nav ul {
-        width: 40%;
-    }
-}
-@media screen and (max-width: 576px) {
-    .menu-toggle {
-        display: none;
-    }
-    nav ul {
-        width: 50%;
-    }
-}
-@media screen and (max-width: 480px) {
+@media (max-width: 960px) {
     .menu-toggle {
         display: flex;
     }
     nav ul {
         /* display: none; */
         position: absolute;
-        width: 70%;
+        width: 75%;
         right: 0;
         top:0;
         height: 100vh;
         flex-direction: column;
-        background-color: yellowgreen ;  
+        background-color: black ;  
         align-items: center;
         justify-content: space-evenly;
         z-index: -1;
         transform: translateX(100%);
         transition: all 1s;
-
-        opacity: 0;
+        opacity: 1;
+    }
+    nav ul li {
+        padding-top: 50px;
+        display: flex;
     }
     nav ul.slide {
         opacity: 1;
         transform: translateX(0%); 
+    }
+    nav ul li a{
+        color: white;
+    }
+    nav ul li a:hover {
+        font-size: 1.8rem;
+        color: orange;
+        transition: 0.25s ease-in-out;
+    }
+    ul li ul.dropdown {
+        width: 100%;
+        background: transparent;
+        backdrop-filter: blur(35px);
+        position: absolute;
+        z-index: 999;
+        display: none;
+        flex-direction: column;
+    
+    }
+    
+    
+    
+    ul li:hover ul.dropdown{
+        display: flex;
+        flex-direction: column; /* Tambahkan properti ini */
+        width: 200px;
+    
+        padding: 2px 2%;
+    }
+    .newsletter-content form {
+        display: block;
+    }
+    .newsletter-content form input:first-child{
+        width: 100%;
+        margin-bottom: 40px;
+
+    }
+
+    .featured-destination {
+        display: block;
+        align-items: center;
+        gap: 9rem;
+        margin-top: 80px;
+    }
+    .destination-text p {
+        text-align: center;
+    }
+
+    .destination-img img {
+        border-radius: 20px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+}
+@media (max-width: 480px) {
+    .newsletter-content {
+        display: block;
+        align-items: center;
+        gap: 2rem;
+    }
+    .logo h1 {
+        font-size: 2.4rem;
+        margin-left: -20%;
+    }
+    #welcome {
+        height: 125vh;
+    }
+    #welcome h1 {
+        font-size: 4rem;
+    }
+    #welcome p{
+        font-size: 12px;
+    }
+    main .service {
+        padding-left: 10%;
+    }
+    .featured-service {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, auto));
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    .row-img{
+        width: 75px;
+        height: 75px;
+    }
+    .row h3{
+        font-size: 16px;
+    }
+
+    .profile-info p {
+        font-size: 14   px;
     }
 }

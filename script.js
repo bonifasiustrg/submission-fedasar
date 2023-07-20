@@ -1,6 +1,14 @@
+/* side bar menu hamburger menu */
 const menuToggle = document.querySelector('.menu-toggle input');
-const nav = document.querySelector('nav ul');
+const navmenu = document.querySelector('nav ul');
 
 menuToggle.addEventListener('click', function(){
-    nav.classList.toggle('slide');
+    navmenu.classList.toggle('slide');
 }) 
+
+/* blur nav when scrolling */
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', function(){
+    nav.classList.toggle('sticky', window.scrollY > 60);
+})
